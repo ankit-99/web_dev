@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            {% block title %}RAM{% endblock title%}
+        </title>
+        {% include 'snippets/css.html' %}        
+    </head>
+    <body>
+        <p>
+            This is going great,            
+        </p>
+        {% include 'snippets/links.html'%}
+        <div class="container">
+        <p>
+            {% for some_items in some_list %}
+              random = {{some_items}}<br>
+            {% endfor %}
+        </p>
+
+        
+            {% block content %}
+            {% endblock content%}
+        </div>
+        {% include 'snippets/js.html'%}
+    </body>
+</html>

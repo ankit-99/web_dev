@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Restaurant||{{block.super}}{%endblock title%}
+{% block content %}
+<h1>Restaurant list</h1>
+<ul>
+	{%for i in object_list%}
+      <li>{{i.name}} {{i.location}} {{i.Timestamp}} {{i.updated}}</li>
+    {%endfor%}  
+
+</ul>
+{% endblock %}
